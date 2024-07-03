@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use Illuminate\Support\Facades\Auth;
 
 /*
 |--------------------------------------------------------------------------
@@ -20,7 +21,5 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
-// Data Tables
-Route::get('/datatables', function() {
-    return view('backend.datatables');
-});
+// User Management
+Route::get('/all-user', [App\Http\Controllers\backend\UserController::class, 'Alluser'])->name('alluser');
