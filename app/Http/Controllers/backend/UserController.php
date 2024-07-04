@@ -5,6 +5,7 @@ namespace App\Http\Controllers\backend;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Hash;
 
 class UserController extends Controller
 {
@@ -18,5 +19,35 @@ class UserController extends Controller
         $all = DB::table('users')
                     ->get();
         return view('backend.user.all-user', compact('all'));
+    }
+
+    public function AddUser()
+    {
+        return view('backend.user.add-user');
+    }
+
+    public function InsertUser(Request $request)
+    {
+        $data = array();
+        $data['name'] = $request->name;
+        $data['email'] = $request->email;
+        $data['role'] = $request->role;
+        $data['password'] = Hash::make($request->password);
+        $data['created_at'] = date('Y-m-d H:i:s');
+        $data['updated_at'] = date('Y-m-d H:i:s');
+
+        $insert = DB::table('users')->insert($data);
+        if ($insert)
+        {
+            echo "Success";
+        }else {
+            echo "something wrong";
+        }
+    }
+
+    public function EditUser($id)
+    {
+        $edit = DB::table('users')->where('id', $id)->first();
+        return view('backend.user.edit-user', compact('edit'));
     }
 }

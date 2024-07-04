@@ -18,7 +18,7 @@
   <!-- Theme style -->
   <link rel="stylesheet" href="{{ asset('template/dist/css/adminlte.min.css') }}">
 </head>
-<body class="hold-transition dark-mode sidebar-mini layout-fixed layout-navbar-fixed layout-footer-fixed">
+<body class="hold-transition sidebar-mini layout-fixed layout-navbar-fixed layout-footer-fixed">
 <div class="wrapper">
 
   <!-- Preloader -->
@@ -44,11 +44,16 @@
 
   <!-- Main Footer -->
   <footer class="main-footer">
-    <strong>Copyright &copy; 2014-2021 <a href="https://adminlte.io">AdminLTE.io</a>.</strong>
+    <strong>Copyright &copy; 2024 <a href="#">GERM SARL</a>.</strong>
     All rights reserved.
+
     <div class="float-right d-none d-sm-inline-block">
-      <b>Version</b> 3.2.0
-    </div>
+        <p class="footer-heart">
+            Fait avec <g-emoji class="g-emoji" alias="heart" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/2764.png">
+                <img class="emoji" alt="heart" height="20" width="20" src="https://github.githubassets.com/images/icons/emoji/unicode/2764.png">
+            </g-emoji> par <a href="https://armin.id">Moustapha Taleb Jiddou</a>
+          </p>
+        </div>
   </footer>
 </div>
 <!-- ./wrapper -->
@@ -106,6 +111,6 @@
       });
     });
   </script>
-  
+
 </body>
 </html>
