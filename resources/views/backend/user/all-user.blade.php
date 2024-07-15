@@ -35,8 +35,8 @@
                   <td>{{ $row->role }}</td>
                   </td>
                   <td>
-                    <a href="{{ URL::to('/edit-user/'.$row->id) }}"></a>
-                    <a href="{{ URL::to('/delete-user/'.$row->id) }}"></a>
+                    <a href="{{ URL::to('/edit-user/'.$row->id) }}" class="btn btn-sm btn-info">Edit</a>
+                    <a href="{{ URL::to('/delete-user/'.$row->id) }}" class="btn btn-sm btn-danger">Delete</a>
                   </td>
                 </tr>
                 @endforeach

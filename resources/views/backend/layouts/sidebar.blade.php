@@ -40,6 +40,11 @@
                         <p>Les Utilisateurs</p>
                     </a>
                   </li>
+                  <li class="nav-item">
+                    <a href="{{ url('/' . ($page = 'add-user')) }}" class="nav-link">
+                        <p>Ajouter Utilisateur</p>
+                    </a>
+                  </li>
                </ul>
               </li>
 

@@ -51,7 +51,7 @@
         <p class="footer-heart">
             Fait avec <g-emoji class="g-emoji" alias="heart" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/2764.png">
                 <img class="emoji" alt="heart" height="20" width="20" src="https://github.githubassets.com/images/icons/emoji/unicode/2764.png">
-            </g-emoji> par <a href="https://armin.id">Moustapha Taleb Jiddou</a>
+            </g-emoji> par <a href="https://moustaphatalebjiddou.github.io/" target="_blank">Moustapha Taleb Jiddou</a>
           </p>
         </div>
   </footer>
@@ -77,10 +77,7 @@
 <!-- ChartJS -->
 <script src="{{ asset('template/plugins/chart.js/Chart.min.js') }}"></script>
 
-<!-- AdminLTE for demo purposes -->
-<script src="{{ asset('template/dist/js/demo.js') }}"></script>
-<!-- AdminLTE dashboard demo (This is only for demo purposes) -->
-<script src="{{ asset('template/dist/js/pages/dashboard2.js') }}"></script>
+
 <!-- DataTables  & Plugins -->
 <script src="{{ asset('template/plugins/datatables/jquery.dataTables.min.js') }}"></script>
 <script src="{{ asset('template/plugins/datatables-bs4/js/dataTables.bootstrap4.min.js') }}"></script>

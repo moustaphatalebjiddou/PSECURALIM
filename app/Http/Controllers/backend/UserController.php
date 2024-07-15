@@ -36,8 +36,10 @@ class UserController extends Controller
         $data['created_at'] = date('Y-m-d H:i:s');
         $data['updated_at'] = date('Y-m-d H:i:s');
 
+
         $insert = DB::table('users')->insert($data);
         if ($insert)
+
         {
             echo "Success";
         }else {
@@ -49,5 +51,34 @@ class UserController extends Controller
     {
         $edit = DB::table('users')->where('id', $id)->first();
         return view('backend.user.edit-user', compact('edit'));
+    }
+
+    public function UpdateUser(Request $request, $id){
+        $data = array();
+        $data['name'] = $request->name;
+        $data['email'] = $request->email;
+        $data['role'] = $request->role;
+        $data['password'] = Hash::make($request->password);
+        $data['created_at'] = date('Y-m-d H:i:s');
+        $data['updated_at'] = date('Y-m-d H:i:s');
+
+        $update = DB::table('users')->where('id',$id)->update($data);
+        if ($update)
+        {
+            echo "Success";
+        }else {
+            echo "something wrong";
+        }
+    }
+
+    public function Deleteuser($id)
+    {
+        $delete = DB::table('users')->where('id',$id)->delete();
+        if($delete)
+        {
+            echo "User Successfully deleted";
+        }else {
+            echo "Something wrong";
+        }
     }
 }

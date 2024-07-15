@@ -27,4 +27,6 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
 Route::get('/all-user', [App\Http\Controllers\backend\UserController::class, 'AllUser'])->name('alluser');
 Route::get('/add-user', [App\Http\Controllers\backend\UserController::class, 'AddUser'])->name('adduser');
 Route::post('/insert-user', [App\Http\Controllers\backend\UserController::class, 'InsertUser'])->name('insertuser');
-Route::post('/edit-user/{id}', [App\Http\Controllers\backend\UserController::class, 'EditUser'])->name('Edituser');
+Route::get('/edit-user/{id}', [App\Http\Controllers\backend\UserController::class, 'EditUser'])->name('Edituser');
+Route::post('/update-user/{id}', [App\Http\Controllers\backend\UserController::class, 'UpdateUser'])->name('Updateuser');
+Route::get('/delete-user/{id}', [App\Http\Controllers\backend\UserController::class, 'DeleteUser'])->name('Deleteuser');
