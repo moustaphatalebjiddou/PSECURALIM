@@ -41,9 +41,17 @@ class UserController extends Controller
         if ($insert)
 
         {
-            echo "Success";
+            $notification = array(
+                'messege'=>'Ajoute avec succees',
+                'alert-type'=>'success'
+            );
+            return redirect()->route('alluser')->with($notification);
         }else {
-            echo "something wrong";
+            $notification = array(
+                'messege'=>'Une erreur est survenue essaye une autre fois',
+                'alert-type'=>'error'
+            );
+            return redirect()->route('alluser')->with($notification);
         }
     }
 
@@ -74,11 +82,21 @@ class UserController extends Controller
     public function Deleteuser($id)
     {
         $delete = DB::table('users')->where('id',$id)->delete();
-        if($delete)
+
+        if ($delete)
+
         {
-            echo "User Successfully deleted";
+            $notification = array(
+                'messege'=>'Supprimee avec succees',
+                'alert-type'=>'success'
+            );
+            return redirect()->route('alluser')->with($notification);
         }else {
-            echo "Something wrong";
+            $notification = array(
+                'messege'=>'Une erreur est survenue essaye une autre fois',
+                'alert-type'=>'error'
+            );
+            return redirect()->route('alluser')->with($notification);
         }
     }
 }

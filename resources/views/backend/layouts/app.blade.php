@@ -17,6 +17,10 @@
   <link rel="stylesheet" href="{{ asset('template/plugins/datatables-buttons/css/buttons.bootstrap4.min.css') }}">
   <!-- Theme style -->
   <link rel="stylesheet" href="{{ asset('template/dist/css/adminlte.min.css') }}">
+  <!-- Toaster Notification -->
+  <link rel="stylesheet" href="{{ asset('toaster/toastr.min.css') }}">
+
+
 </head>
 <body class="hold-transition sidebar-mini layout-fixed layout-navbar-fixed layout-footer-fixed">
 <div class="wrapper">
@@ -91,6 +95,55 @@
 <script src="{{ asset('template/plugins/datatables-buttons/js/buttons.html5.min.js') }}"></script>
 <script src="{{ asset('template/plugins/datatables-buttons/js/buttons.print.min.js') }}"></script>
 <script src="{{ asset('template/plugins/datatables-buttons/js/buttons.colVis.min.js') }}"></script>
+  <!-- Start Toaster & Sweet Alert -->
+  <script src="{{ asset('toaster/toastr.min.js') }}">
+  <script src="{{ asset('toaster/sweetalert.min.js') }}">
+
+    <script>
+        @if (Session::has('messege'))
+        var type="{{ Session::get('alert-type','info') }}"
+        switch(type){
+        case 'info':
+        toastr.info("{{ Session::get('messege') }}");
+        break;
+        case 'success':
+        toastr.success("{{ Session::get('messege') }}");
+        break;
+        case 'warning':
+        toastr.warning("{{ Session::get('messege') }}");
+        break;
+        case 'error':
+        toastr.error("{{ Session::get('messege') }}");
+        break;
+        }
+        @endif
+</script>
+
+
+
+<script>
+$(document).on("click", "#delete", function(e)){
+        e.preventDefault();
+        var link = $(this).attr("href");
+        swal({
+            title: "est vous sur de vouloir supprime ?",
+            text : "Si vous supprimer , elle sera supprimer definitivement !",
+            icon : "warning",
+            buttons: true,
+            dangerMode: true,
+            })
+        .then((willDelete) => {
+            if (willDelete){
+                window.location.href = link;
+            }else {
+                swal("Garder les donnees !");
+            }
+        });
+    }
+
+</script>
+
+
 <script>
     $(function () {
       $("#example1").DataTable({
