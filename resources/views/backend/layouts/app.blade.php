@@ -48,8 +48,9 @@
 
   <!-- Main Footer -->
   <footer class="main-footer">
-    <strong>Copyright &copy; 2024 <a href="#">GERM SARL</a>.</strong>
-    All rights reserved.
+    <small><strong>Copyright &copy;<script type="text/javascript">
+        document.write(new Date().getFullYear());
+      </script> <a href="#">GEREM SARL</a></strong>Tous droits réservés.
 
     <div class="float-right d-none d-sm-inline-block">
         <p class="footer-heart">
@@ -58,6 +59,7 @@
             </g-emoji> par <a href="https://moustaphatalebjiddou.github.io/" target="_blank">Moustapha Taleb Jiddou</a>
           </p>
         </div>
+    </small>
   </footer>
 </div>
 <!-- ./wrapper -->
