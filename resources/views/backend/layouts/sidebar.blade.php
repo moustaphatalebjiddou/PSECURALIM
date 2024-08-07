@@ -13,7 +13,8 @@
           <img src="{{ asset('template/dist/img/user2-160x160.jpg') }}" class="img-circle elevation-2" alt="User Image">
         </div>
         <div class="info">
-          <a href="{{ route('home') }}" style="color: white;" class="d-block">{{ Auth::user()->name }}</a>
+            <h6 style="color: white;" class="d-block">{{ Auth::user()->name }}</h6>
+            <span class="mb-0 text-muted">{{ Auth::user()->email }}</span>
         </div>
       </div>
 
@@ -37,15 +38,105 @@
                 <ul class="nav nav-treeview">
                   <li class="nav-item">
                     <a href="{{ url('/' . ($page = 'all-user')) }}" class="nav-link">
-                        <p>Les Utilisateurs</p>
+                        <i class="	fas fa-list"></i>
+                        <p>List</p>
                     </a>
                   </li>
                   <li class="nav-item">
                     <a href="{{ url('/' . ($page = 'add-user')) }}" class="nav-link">
+                        <i class="fas fa-user-plus"></i>
                         <p>Ajouter Utilisateur</p>
                     </a>
                   </li>
+                  <li class="nav-item">
+                    <a href="{{ url('/' . ($page = 'add-user')) }}" class="nav-link">
+                        <i class="	far fa-check-circle"></i>
+                        <p>Les roles</p>
+                    </a>
+                  </li>
+
                </ul>
+              </li>
+
+              <li class="nav-item">
+                <a href="#" class="nav-link">
+                    <i class="fas fa-map-marker-alt" style="color: white"></i>
+                  <p style="color: white;">
+                   Lieux des affectations de travail
+                    <i class="fas fa-angle-left right"></i>
+                    <span class="badge badge-info right"></span>
+                  </p>
+                </a>
+                <ul class="nav nav-treeview">
+                  <li class="nav-item">
+                    <a href="{{ url('/' . ($page = 'all-wilaya')) }}" class="nav-link">
+                        <i class="	fas fa-list"></i>
+                        <p>List </p>
+                    </a>
+                  </li>
+               </ul>
+               <ul class="nav nav-treeview">
+                <li class="nav-item">
+                  <a href="{{ url('/' . ($page = 'add-wilaya')) }}" class="nav-link">
+                    <i class="	fas fa-pen"></i>
+                      <p>Ajouter des lieux </p>
+                  </a>
+                </li>
+             </ul>
+              </li>
+
+              <li class="nav-item">
+                <a href="#" class="nav-link">
+                    <i class="fas fa-folder-open" style="color: white"></i>
+                  <p style="color: white;">
+                   Les Rapports
+                    <i class="fas fa-angle-left right"></i>
+                    <span class="badge badge-info right"></span>
+                  </p>
+                </a>
+                <ul class="nav nav-treeview">
+                  <li class="nav-item">
+                    <a href="{{ url('/' . ($page = 'all-wilaya')) }}" class="nav-link">
+                        <i class="far fa-file"></i>
+                        <p>Rapports des missions </p>
+                    </a>
+                  </li>
+               </ul>
+               <ul class="nav nav-treeview">
+                <li class="nav-item">
+                  <a href="{{ url('/' . ($page = 'add-wilaya')) }}" class="nav-link">
+                    <i class="	fas fa-male"></i>
+                      <p>Personnes Contacter </p>
+                  </a>
+                </li>
+             </ul>
+              </li>
+
+              <li class="nav-item">
+                <a href="#" class="nav-link">
+                    <i class="fas fa-cogs" style="color: white"></i>
+                  <p style="color: white;">
+                   Les parametres
+                    <i class="fas fa-angle-left right"></i>
+                    <span class="badge badge-info right"></span>
+                  </p>
+                </a>
+                <ul class="nav nav-treeview">
+                  <li class="nav-item">
+                    <a href="{{ url('/' . ($page = 'all-wilaya')) }}" class="nav-link">
+                        <i class="	fas fa-list"></i>
+                        <p>List </p>
+                    </a>
+                  </li>
+               </ul>
+               <ul class="nav nav-treeview">
+                <li class="nav-item">
+                  <a href="{{ url('/' . ($page = 'add-wilaya')) }}" class="nav-link">
+                    <i class="	fas fa-pen"></i>
+                      <p>Ajouter des lieux </p>
+                  </a>
+                </li>
+             </ul>
               </li>
 
 
