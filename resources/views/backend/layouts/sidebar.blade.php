@@ -1,8 +1,8 @@
 <aside class="main-sidebar sidebar-dark-primary elevation-4"  style="background-color: rgb(24, 80, 109)">
     <!-- Brand Logo -->
-    <a href="{{ route('home') }}" class="brand-link" style="background-color: rgb(8, 96, 144)">
+    <a href="{{ URL::to('/home') }}" class="brand-link" style="background-color: rgb(8, 96, 144)">
       <img src="{{ asset('template/dist/img/GEREMLOGO.png') }}" alt="GEREME Logo" class="brand-image img-circle elevation-4" style="opacity: .8">
-      <span class="brand-text font-weight-light" style="color: white;">SECURALIM</span>
+      <span class="brand-text font-weight-light" style="color: white;">PSECURALIM</span>
     </a>
 
     <!-- Sidebar -->
@@ -38,7 +38,7 @@
                 <ul class="nav nav-treeview">
                   <li class="nav-item">
                     <a href="{{ url('/' . ($page = 'all-user')) }}" class="nav-link">
-                        <i class="	fas fa-list"></i>
+                        <i class="	fas fa-map-marked"></i>
                         <p>List</p>
                     </a>
                   </li>
@@ -69,74 +69,69 @@
                 </a>
                 <ul class="nav nav-treeview">
                   <li class="nav-item">
-                    <a href="{{ url('/' . ($page = 'all-wilaya')) }}" class="nav-link">
-                        <i class="	fas fa-list"></i>
-                        <p>List </p>
+                    <a href="{{ url('/' . ($page = 'wilayas')) }}" class="nav-link">
+                        <i class="fas fa-map-marked"></i>
+                        <p>Les wilaya </p>
                     </a>
                   </li>
                </ul>
+
                <ul class="nav nav-treeview">
                 <li class="nav-item">
-                  <a href="{{ url('/' . ($page = 'add-wilaya')) }}" class="nav-link">
-                    <i class="	fas fa-pen"></i>
-                      <p>Ajouter des lieux </p>
+                  <a href="{{ url('/' . ($page = 'moughataas')) }}" class="nav-link">
+                      <i class="	fas fa-map-marked"></i>
+                      <p>Les Moughataas </p>
                   </a>
                 </li>
              </ul>
-              </li>
+
+             <ul class="nav nav-treeview">
+                <li class="nav-item">
+                  <a href="{{ url('/' . ($page = 'communes')) }}" class="nav-link">
+                      <i class="	fas fa-map-marked"></i>
+                      <p>Les Communes </p>
+                  </a>
+                </li>
+             </ul>
+
+             <ul class="nav nav-treeview">
+                <li class="nav-item">
+                  <a href="{{ url('/' . ($page = 'localites')) }}" class="nav-link">
+                      <i class="	fas fa-map-marked"></i>
+                      <p>Les Localites </p>
+                  </a>
+                </li>
+             </ul>
+
+             <ul class="nav nav-treeview">
+                <li class="nav-item">
+                  <a href="{{ url('/' . ($page = 'perimetres')) }}" class="nav-link">
+                      <i class="	fas fa-map-marked"></i>
+                      <p>Les Perimetres </p>
+                  </a>
+                </li>
+             </ul>
+            </li>
+
 
               <li class="nav-item">
                 <a href="#" class="nav-link">
-                    <i class="fas fa-folder-open" style="color: white"></i>
+                    <i class="fas fa-sticky-note" style="color: white"></i>
                   <p style="color: white;">
-                   Les Rapports
+                    Enquêtes socio fonciers
                     <i class="fas fa-angle-left right"></i>
                     <span class="badge badge-info right"></span>
                   </p>
                 </a>
                 <ul class="nav nav-treeview">
                   <li class="nav-item">
-                    <a href="{{ url('/' . ($page = 'all-wilaya')) }}" class="nav-link">
-                        <i class="far fa-file"></i>
-                        <p>Rapports des missions </p>
+                    <a href="{{ url('/' . ($page = 'identification-irrigues')) }}" class="nav-link">
+                        <i class="fas fa-file"></i>
+                        <p>Perimetre Irrigues</p>
                     </a>
                   </li>
                </ul>
-               <ul class="nav nav-treeview">
-                <li class="nav-item">
-                  <a href="{{ url('/' . ($page = 'add-wilaya')) }}" class="nav-link">
-                    <i class="	fas fa-male"></i>
-                      <p>Personnes Contacter </p>
-                  </a>
-                </li>
-             </ul>
-              </li>
 
-              <li class="nav-item">
-                <a href="#" class="nav-link">
-                    <i class="fas fa-cogs" style="color: white"></i>
-                  <p style="color: white;">
-                   Les parametres
-                    <i class="fas fa-angle-left right"></i>
-                    <span class="badge badge-info right"></span>
-                  </p>
-                </a>
-                <ul class="nav nav-treeview">
-                  <li class="nav-item">
-                    <a href="{{ url('/' . ($page = 'all-wilaya')) }}" class="nav-link">
-                        <i class="	fas fa-list"></i>
-                        <p>List </p>
-                    </a>
-                  </li>
-               </ul>
-               <ul class="nav nav-treeview">
-                <li class="nav-item">
-                  <a href="{{ url('/' . ($page = 'add-wilaya')) }}" class="nav-link">
-                    <i class="	fas fa-pen"></i>
-                      <p>Ajouter des lieux </p>
-                  </a>
-                </li>
-             </ul>
               </li>
 
 

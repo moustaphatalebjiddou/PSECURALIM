@@ -10,6 +10,11 @@
   <!-- MDBootstrap CSS -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/6.1.0/mdb.min.css">
   <!-- Custom Styles -->
+  <link rel="stylesheet" href="{{ asset('template/plugins/fontawesome-free/css/all.min.css') }}">
+  <!-- icheck bootstrap -->
+  <link rel="stylesheet" href="{{ asset('template/plugins/icheck-bootstrap/icheck-bootstrap.min.css') }}">
+  <!-- Theme style -->
+  <link rel="stylesheet" href="{{ asset('template/dist/css/adminlte.min.css') }}">
   <style>
     body {
       background-color: #eee;
@@ -66,14 +71,14 @@
   <div class="container py-5 h-100">
     <div class="row d-flex justify-content-center align-items-center h-100">
       <div class="col-xl-8 col-lg-10">
-        <div class="card rounded-3 text-black">
+        <div class="card rounded-6 text-black">
           <div class="row g-0">
             <!-- Left Column -->
             <div class="col-lg-6">
-              <div class="card-body p-md-2 mx-md-2">
+              <div class="card-body p-md-0 mx-md-3">
                 <div class="text-center">
-                  <img src="{{ asset('template/images/GEREMLOGO.png') }}" style="width: 195px;" alt="Logo">
-                  <h4 class="mt-1 mb-5 pb-1 text-custom">Bienvenue</h4>
+                  <img src="{{ asset('template/images/logogereme.jpg') }}" style="width: 195px; height:180px;" alt="Logo">
+                  <h4 class="mt-0 mb-4 pb-0 text-custom">Bienvenue</h4>
                 </div>
                 <form method="POST" action="{{ route('login') }}">
                   @csrf
@@ -97,8 +102,8 @@
             <!-- Right Column -->
             <div class="col-lg-6 d-flex align-items-center gradient-custom-2">
               <div class="text-white px-3 py-4 p-md-5 mx-md-4">
-                <h4 class="mb-4">Groupe d'etudes et de recherches multiples</h4>
-                <p class="small mb-0">Bienvenue dans la plateforme créée et gérée par GEREM pour l'administration des données du projet SECURALIM.</p>
+                <h4 class="mb-5">Groupe d'etudes et de recherches multiples</h4>
+                <h6>Bienvenue sur la plateforme PSECURALIM créée par le Bureau GEREM pour gérer les données du projet SECURALIM.</h6>
               </div>
             </div>
           </div>

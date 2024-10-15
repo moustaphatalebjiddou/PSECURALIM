@@ -11,18 +11,20 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::table('wilaya', function (Blueprint $table) {
-            $table->string('nom_du_wilaya')->after('id'); // Ajouter la colonne après l'ID
+        Schema::create('wilayas', function (Blueprint $table) {
+            $table->id();
+            $table->string('nom_du_wilaya');
+            // Autres colonnes si nécessaire
+            $table->timestamps();
         });
     }
+
 
     /**
      * Reverse the migrations.
      */
-    public function down()
+    public function down(): void
     {
-        Schema::table('wilaya', function (Blueprint $table) {
-            $table->dropColumn('nom_du_wilaya');
-        });
+        Schema::dropIfExists('wilayas');
     }
 };

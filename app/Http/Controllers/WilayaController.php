@@ -1,5 +1,4 @@
 <?php
-
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
@@ -10,56 +9,42 @@ class WilayaController extends Controller
     public function index()
     {
         $wilayas = Wilaya::all();
-        return view('backend.wilaya.all-wilaya', compact('wilayas'));
+        return view('backend.wilayas.index-wilaya', compact('wilayas'));
     }
 
     public function create()
     {
-        return view('backend.wilaya.add-wilaya');
+        return view('backend.wilayas.add-wilaya');
     }
 
     public function store(Request $request)
     {
         $request->validate([
-            'moughataa' => 'required',
-            'localite' => 'required',
-            'commune' => 'required',
-            'nom_du_perimetre' => 'required',
-            'nom_du_wilaya' => 'required',
+            'nom_du_wilaya' => 'required|string|max:255',
         ]);
 
         Wilaya::create($request->all());
-
-        return redirect()->route('wilaya.index')->with('success', 'Wilaya ajoutée avec succès');
+        return redirect()->route('wilayas.index')->with('success', 'Wilaya créée avec succès.');
     }
 
-    public function edit($id)
+    public function edit(Wilaya $wilaya)
     {
-        $wilaya = Wilaya::find($id);
-        return view('backend.wilaya.edit-wilaya', compact('wilaya'));
+        return view('backend.wilayas.edit-wilaya', compact('wilaya'));
     }
 
-    public function update(Request $request, $id)
+    public function update(Request $request, Wilaya $wilaya)
     {
         $request->validate([
-            'moughataa' => 'required',
-            'localite' => 'required',
-            'commune' => 'required',
-            'nom_du_perimetre' => 'required',
-            'nom_du_wilaya' => 'required',
+            'nom_du_wilaya' => 'required|string|max:255',
         ]);
 
-        $wilaya = Wilaya::find($id);
         $wilaya->update($request->all());
-
-        return redirect()->route('wilaya.index')->with('success', 'Wilaya mise à jour avec succès');
+        return redirect()->route('wilayas.index')->with('success', 'Wilaya mise à jour avec succès.');
     }
 
-    public function destroy($id)
+    public function destroy(Wilaya $wilaya)
     {
-        $wilaya = Wilaya::find($id);
         $wilaya->delete();
-
-        return redirect()->route('wilaya.index')->with('success', 'Wilaya supprimée avec succès');
+        return redirect()->route('wilayas.index')->with('success', 'Wilaya supprimée avec succès.');
     }
 }
