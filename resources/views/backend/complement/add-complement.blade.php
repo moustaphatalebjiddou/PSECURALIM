@@ -18,10 +18,10 @@
                 <div class="col-12">
                     <div class="card">
                         <div class="card-header">
-                            <h3 class="card-title">Ajouter une enquete d'un perimetre irriguée</h3>
+                            <h3 class="card-title">Ajouter une enquete champs irrigues en complement</h3>
                         </div>
                         <div class="card-body">
-                            <form id="multiStepForm"  action="{{ route('identification_irrigues.store') }}" method="POST">
+                            <form id="multiStepForm"  action="{{ route('complement.store') }}" method="POST">
                                 @csrf
                                   <!-- Barre de progression -->
         <div class="progress mb-4">
@@ -515,7 +515,7 @@
                     if (response.ok) {
                         // Si la soumission est réussie, rediriger ou afficher un message de succès
                         alert('Formulaire soumis avec succès !');
-                        window.location.href = '/identification-irrigues'; // Redirection vers une page de succès
+                        window.location.href = '/complement'; // Redirection vers une page de succès
                     } else {
                         // Gérer les erreurs
                         return response.json().then(errors => {
@@ -559,6 +559,8 @@
     document.getElementById('certificat_de_propriete_hakem').addEventListener('change', function() {
         document.getElementById('certificathakemDetails').style.display = this.checked ? 'block' : 'none';
     });
+
+
 
     
 

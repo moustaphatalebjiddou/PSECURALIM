@@ -116,9 +116,9 @@
 
               <li class="nav-item">
                 <a href="#" class="nav-link">
-                    <i class="fas fa-sticky-note" style="color: white"></i>
+                    <i class="	fas fa-bookmark" style="color: white"></i>
                   <p style="color: white;">
-                    Enquêtes socio fonciers
+                    Enquêtes socio fonciers GEREM
                     <i class="fas fa-angle-left right"></i>
                     <span class="badge badge-info right"></span>
                   </p>
@@ -126,14 +126,40 @@
                 <ul class="nav nav-treeview">
                   <li class="nav-item">
                     <a href="{{ url('/' . ($page = 'identification-irrigues')) }}" class="nav-link">
-                        <i class="fas fa-file"></i>
+                        <i class="fas fa-location-arrow"></i>
                         <p>Perimetre Irrigues</p>
+                    </a>
+                  </li>
+               </ul>
+               <ul class="nav nav-treeview">
+                <li class="nav-item">
+                  <a href="{{ url('/' . ($page = 'complement')) }}" class="nav-link">
+                      <i class="fas fa-location-arrow"></i>
+                      <p>Irriguation En Complement</p>
+                  </a>
+                </li>
+             </ul>
+              </li>
+
+              <li class="nav-item">
+                <a href="#" class="nav-link">
+                    <i class="	fas fa-bookmark" style="color: white"></i>
+                  <p style="color: white;">
+                    Enquêtes socio fonciers Enabel
+                    <i class="fas fa-angle-left right"></i>
+                    <span class="badge badge-info right"></span>
+                  </p>
+                </a>
+                <ul class="nav nav-treeview">
+                  <li class="nav-item">
+                    <a href="{{ url('/' . ($page = 'cooperativerizicole')) }}" class="nav-link">
+                        <i class="fas fa-location-arrow"></i>
+                        <p>Cooperatives rizicoles</p>
                     </a>
                   </li>
                </ul>
 
               </li>
-
 
         </ul>
       </nav>

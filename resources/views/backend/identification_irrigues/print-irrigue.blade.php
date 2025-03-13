@@ -9,7 +9,9 @@
     <div class="col-md-12 d-flex justify-content-between align-items-center">
         <!-- Logo aligné à gauche -->
         <div class="logo-container text-left">
-            <img src="{{ asset('template/images/GEREMLOGO.jpg') }}" alt="Logo" height="180">
+            <img src="{{ asset('template/images/logogereme.jpg') }}" style="width: 80px; height:80px;" alt="Logo">
+            <img src="{{ asset('template/images/Logo-Finance-par-l-Union-europeenne.jpg') }}" style="width: 150px; height:150px;" alt="Logo">
+            <img src="{{ asset('template/images/ENABE1L.png') }}" style="width: 90px; height:100px;" alt="Logo">
         </div>
 
         <!-- Titre centré -->
@@ -83,7 +85,7 @@
                             </h5>
 
 
-                            
+
                             <h3 class="bg-info">Aspects économiques et sociaux </h3>
                             <!-- Aspects économiques et sociaux -->
                             <h5><strong>Aspects économiques et sociaux:</strong>

@@ -77,7 +77,9 @@
             <div class="col-lg-6">
               <div class="card-body p-md-0 mx-md-3">
                 <div class="text-center">
-                  <img src="{{ asset('template/images/logogereme.jpg') }}" style="width: 195px; height:180px;" alt="Logo">
+                  <img src="{{ asset('template/images/logogereme.jpg') }}" style="width: 80px; height:80px;" alt="Logo">
+                  <img src="{{ asset('template/images/Logo-Finance-par-l-Union-europeenne.jpg') }}" style="width: 150px; height:150px;" alt="Logo">
+                  <img src="{{ asset('template/images/ENABE1L.png') }}" style="width: 90px; height:100px;" alt="Logo">
                   <h4 class="mt-0 mb-4 pb-0 text-custom">Bienvenue</h4>
                 </div>
                 <form method="POST" action="{{ route('login') }}">

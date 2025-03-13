@@ -14,4 +14,6 @@ class Wilaya extends Model
     {
         return $this->hasMany(Moughataa::class);
     }
+
+    
 }

@@ -55,6 +55,9 @@
     <div class="header">
         <div>
             <img src="{{'data:image/png;base64,'.base64_encode(file_get_contents(public_path('template/images/GEREMLOGO.jpg')))}}" class="logo">
+            <img src="{{'data:image/png;base64,'.base64_encode(file_get_contents(public_path('template/images/Logo-Finance-par-l-Union-europeenne.jpg')))}}" style="width: 200px; height: 200px;" class="logo">
+            <img src="{{'data:image/png;base64,'.base64_encode(file_get_contents(public_path('template/images/ENABE1L.png')))}}" class="logo">
+
         </div> Groupe d'etudes et de recherches multiples
         <div class="project-title">SECURALIM</div>
     </div>
