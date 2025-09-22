@@ -24,6 +24,7 @@ class IdentificationIrrigue extends Model
         'nombre_homme',
         'nombre_femme',
         'date_regul_stru_exploitant',
+        'date_denquete',
         'recepisse_reconnaissance',
         'nom_du_dirigeant_strc_exploitant',
         'telephone',

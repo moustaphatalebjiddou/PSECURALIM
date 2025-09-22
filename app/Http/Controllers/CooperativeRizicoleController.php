@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Cooperativerizicole;
+use App\Models\CooperativeRizicole;
 use App\Models\Wilaya;
 use App\Models\Moughataa;
 use App\Models\Commune;
@@ -10,7 +10,7 @@ use App\Models\Localite;
 use App\Models\Perimetre;
 use Maatwebsite\Excel\Facades\Excel;
 use App\Exports\CooperativeExport;
-use App\Imports\CooperativerizicoleImport;
+use App\Imports\CooperativeRizicoleImport;
 use Barryvdh\DomPDF\Facade\Pdf;
 use Illuminate\Http\Request;
 

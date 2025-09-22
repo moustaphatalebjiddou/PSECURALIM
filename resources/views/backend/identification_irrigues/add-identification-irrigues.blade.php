@@ -129,6 +129,12 @@
                                     <input type="date" name="date_regul_stru_exploitant" class="form-control" id="date_regul_stru_exploitant" required>
                                 </div>
 
+                                <!-- Champ date_denquete -->
+                                <div class="form-group">
+                                    <label for="date_denquete">Date d'enquete</label>
+                                    <input type="date" name="date_denquete" class="form-control" id="date_denquete" required>
+                                </div>
+
                                 <!-- Champ numero_recepi_reconn -->
                                 <div class="form-group">
                                     <label for="recepisse_reconnaissance">Numéro de Récepissé de Reconnaissance</label>
@@ -560,7 +566,7 @@
         document.getElementById('certificathakemDetails').style.display = this.checked ? 'block' : 'none';
     });
 
-    
+
 
 </script>
 

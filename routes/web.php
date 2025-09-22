@@ -1,5 +1,4 @@
 <?php
-use App\Http\Controllers\CooperativerizicoleController;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Auth;
 use App\Http\Controllers\HomeController;
@@ -12,6 +11,8 @@ use App\Http\Controllers\LocaliteController;
 use App\Http\Controllers\PerimetreController;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\ComplementController;
+use App\Http\Controllers\CooperativeRizicoleController;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -131,23 +132,23 @@ Route::delete('complement/{id}', [ComplementController::class, 'destroy'])->name
 
 // Cooperatives
 
-Route::get('cooperativerizicole', [CooperativerizicoleController::class, 'index'])->name('cooperativerizicole.index'); 
-Route::get('cooperativerizicole/create', [CooperativerizicoleController::class, 'create'])->name('cooperativerizicole.create');
-Route::post('cooperativerizicole', [CooperativerizicoleController::class, 'store'])->name('cooperativerizicole.store');
-Route::get('cooperativerizicole/{id}/edit', [CooperativerizicoleController::class, 'edit'])->name('cooperativerizicole.edit');
-Route::put('cooperativerizicole/{id}', [CooperativerizicoleController::class, 'update'])->name('cooperativerizicole.update');
-Route::delete('cooperativerizicole/{id}', [CooperativerizicoleController::class, 'destroy'])->name('cooperativerizicole.destroy');
+Route::get('cooperativerizicole', [CooperativeRizicoleController::class, 'index'])->name('cooperativerizicole.index'); 
+Route::get('cooperativerizicole/create', [CooperativeRizicoleController::class, 'create'])->name('cooperativerizicole.create');
+Route::post('cooperativerizicole', [CooperativeRizicoleController::class, 'store'])->name('cooperativerizicole.store');
+Route::get('cooperativerizicole/{id}/edit', [CooperativeRizicoleController::class, 'edit'])->name('cooperativerizicole.edit');
+Route::put('cooperativerizicole/{id}', [CooperativeRizicoleController::class, 'update'])->name('cooperativerizicole.update');
+Route::delete('cooperativerizicole/{id}', [CooperativeRizicoleController::class, 'destroy'])->name('cooperativerizicole.destroy');
 
-Route::get('moughataas/{wilayaId}', [CooperativerizicoleController::class, 'getMoughataas']);
-Route::get('communes/{moughataaId}', [CooperativerizicoleController::class, 'getCommunes']);
-Route::get('localites/{communeId}', [CooperativerizicoleController::class, 'getLocalites']);
-Route::get('perimetres/{localiteId}', [CooperativerizicoleController::class, 'getPerimetres']);
+Route::get('moughataas/{wilayaId}', [CooperativeRizicoleController::class, 'getMoughataas']);
+Route::get('communes/{moughataaId}', [CooperativeRizicoleController::class, 'getCommunes']);
+Route::get('localites/{communeId}', [CooperativeRizicoleController::class, 'getLocalites']);
+Route::get('perimetres/{localiteId}', [CooperativeRizicoleController::class, 'getPerimetres']);
 
-Route::get('export_cooperativerizicole', [CooperativerizicoleController::class, 'export']);
-Route::post('import_cooperativerizicole', [CooperativerizicoleController::class, 'import']);
-Route::get('cooperativerizicole/export/pdf', [CooperativerizicoleController::class, 'exportPdf'])->name('cooperativerizicole.export.pdf');
-Route::get('print_cooperativerizicole/{id}', [CooperativerizicoleController::class, 'print_cooperativerizicole']);
+Route::get('export_cooperativerizicole', [CooperativeRizicoleController::class, 'export']);
+Route::post('import_cooperativerizicole', [CooperativeRizicoleController::class, 'import']);
+Route::get('cooperativerizicole/export/pdf', [CooperativeRizicoleController::class, 'exportPdf'])->name('cooperativerizicole.export.pdf');
+Route::get('print_cooperativerizicole/{id}', [CooperativeRizicoleController::class, 'print_cooperativerizicole']);
 Route::get('/home', [DashboardController::class, 'index'])->name('dashboard');
-Route::get('cooperativerizicole/{id}/edit', [CooperativerizicoleController::class, 'edit'])->name('cooperativerizicole.edit');
-Route::put('cooperativerizicole/{id}', [CooperativerizicoleController::class, 'update'])->name('cooperativerizicole.update');
-Route::delete('cooperativerizicole/{id}', [CooperativerizicoleController::class, 'destroy'])->name('cooperativerizicole.destroy');
+Route::get('cooperativerizicole/{id}/edit', [CooperativeRizicoleController::class, 'edit'])->name('cooperativerizicole.edit');
+Route::put('cooperativerizicole/{id}', [CooperativeRizicoleController::class, 'update'])->name('cooperativerizicole.update');
+Route::delete('cooperativerizicole/{id}', [CooperativeRizicoleController::class, 'destroy'])->name('cooperativerizicole.destroy');

@@ -9,9 +9,9 @@
                     <div class="card">
                         <div class="card-header">
                             <div class="d-flex justify-content-between align-items-center">
-                                <h3 class="card-title">Liste des Identifications Irriguées</h3>
+                                <h3 class="card-title">Liste des perimetres Irriguées</h3>
                                 <div class="btn-group">
-                                    <a href="{{ route('identification_irrigues.create') }}" class="btn btn-primary">Ajouter un fiche d'enquete du perimetre irrigue</a>
+                                    <a href="{{ route('identification_irrigues.create') }}" class="btn btn-primary">Remplir nouveau fiche </a>
                                     <a href="{{ url('export_irrigue') }}" class="btn btn-success">Exporter Excel</a>
                                     <a href="{{ route('identification_irrigues.export.pdf') }}" class="btn btn-danger">Exporter PDF</a>
                                     <button class="btn btn-info" onclick="printTable()">Imprimer Tout</button>
@@ -84,6 +84,7 @@
                                                 <strong>Nombre d'Hommes:</strong> {{ $identification->nombre_homme ?? 0 }}<br>
                                                 <strong>Nombre de Femmes:</strong> {{ $identification->nombre_femme ?? 0 }}<br>
                                                 <strong>Date de Régularisation:</strong> {{ $identification->date_regul_stru_exploitant ?? 'Non spécifié' }}<br>
+                                                <strong>Date d'enquete:</strong> {{ $identification->date_denquete ?? 'Non spécifié' }}<br>
                                                 <strong>Numéro de Récépissé:</strong> {{ $identification->recepisse_reconnaissance ?? 'Non spécifié' }}<br>
                                                 <strong>Nom du Dirigeant:</strong> {{ $identification->nom_du_dirigeant_strc_exploitant ?? 'Non spécifié' }}<br>
                                                 <strong>Téléphone:</strong> {{ $identification->telephone ?? 'Non spécifié' }}<br>
@@ -179,7 +180,7 @@
         var fieldNames = [
             'Wilaya', 'Moughataa', 'Commune', 'Périmètre', 'Localité', 'Date d\'Aménagement', 'Superficie Mise en Valeur',
             'Vocation du Périmètre', 'Nature de l\'Organisation', 'Nombre d\'Adhérents', 'Nombre d\'Hommes', 'Nombre de Femmes',
-            'Date de Régularisation', 'Numéro de Récépissé', 'Nom du Dirigeant', 'Téléphone', 'Propriété Terrain', 'Mode Acquisition',
+            'Date de Régularisation', 'Date d\'enquete', 'Numéro de Récépissé', 'Nom du Dirigeant', 'Téléphone', 'Propriété Terrain', 'Mode Acquisition',
             'Loué à Qui', 'Loué Quel Prix', 'Loué Pour Combien de Temps', 'Loué par Contrat', 'Prêté par Qui', 'Conditions de Prêt',
             'Prêté Pour Combien de Temps', 'Prêté par Contrat', 'Peut Vendre à Étrangers', 'Peut Vendre à Membres', 'Peut Prêter à Étrangers',
             'Peut Louer à Membres', 'Nombre d\'Étrangers Cultivant', 'Étrangers Acquis Droit par Achat', 'Étrangers Acquis Droit par Prêt',
@@ -241,7 +242,7 @@
         var fieldNames = [
             'Wilaya', 'Moughataa', 'Commune', 'Périmètre', 'Localité', 'Date d\'Aménagement', 'Superficie Mise en Valeur',
             'Vocation du Périmètre', 'Nature de l\'Organisation', 'Nombre d\'Adhérents', 'Nombre d\'Hommes', 'Nombre de Femmes',
-            'Date de Régularisation', 'Numéro de Récépissé', 'Nom du Dirigeant', 'Téléphone', 'Propriété Terrain', 'Mode Acquisition',
+            'Date de Régularisation', 'Date d\'enquete', 'Numéro de Récépissé', 'Nom du Dirigeant', 'Téléphone', 'Propriété Terrain', 'Mode Acquisition',
             'Loué à Qui', 'Loué Quel Prix', 'Loué Pour Combien de Temps', 'Loué par Contrat', 'Prêté par Qui', 'Conditions de Prêt',
             'Prêté Pour Combien de Temps', 'Prêté par Contrat', 'Peut Vendre à Étrangers', 'Peut Vendre à Membres', 'Peut Prêter à Étrangers',
             'Peut Louer à Membres', 'Nombre d\'Étrangers Cultivant', 'Étrangers Acquis Droit par Achat', 'Étrangers Acquis Droit par Prêt',

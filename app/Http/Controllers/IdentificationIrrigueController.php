@@ -33,6 +33,7 @@ class IdentificationIrrigueController extends Controller
               ->orWhere('nom_du_dirigeant_strc_exploitant', 'like', "%{$search}%")
               ->orWhere('telephone', 'like', "%{$search}%")
               ->orWhere('date_regul_stru_exploitant', 'like', "%{$search}%")
+              ->orWhere('date_denquete', 'like', "%{$search}%")
               ->orWhere('date_de_mise_en_valeur', 'like', "%{$search}%")
               ->orWhere('nature_de_l_organisation', 'like', "%{$search}%")
               ->orWhere('propriete_terrain', 'like', "%{$search}%")
@@ -132,6 +133,7 @@ class IdentificationIrrigueController extends Controller
             'nom_du_dirigeant_strc_exploitant' => 'required|string',
             'telephone' => 'required|numeric',
             'date_regul_stru_exploitant'=> 'required|date',
+            'date_denquete'=> 'required|date',
             'date_de_mise_en_valeur' => 'required|date',
             'vocation_du_perimetre' => 'nullable|array',
             'nature_de_l_organisation' => 'required|string',
@@ -239,6 +241,7 @@ class IdentificationIrrigueController extends Controller
                         'nom_du_dirigeant_strc_exploitant' => 'required|string',
                         'telephone' => 'required|numeric',
                         'date_regul_stru_exploitant'=> 'required|date',
+                        'date_denquete'=> 'required|date',
                         'date_de_mise_en_valeur' => 'required|date',
                         'vocation_du_perimetre' => 'nullable|array',
                         'nature_de_l_organisation' => 'required|string',

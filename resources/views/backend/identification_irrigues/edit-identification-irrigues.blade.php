@@ -135,7 +135,13 @@
                                     <label for="date_regul_stru_exploitant">Date de Régularisation de la Structure Exploitante</label>
                                     <input type="date" name="date_regul_stru_exploitant" class="form-control" id="date_regul_stru_exploitant" value="{{ $irrigue->date_regul_stru_exploitant }}">
                                 </div>
-
+                                
+                                <!-- Champ date_denquete -->
+                                <div class="form-group">
+                                <label for="date_denquete">Date d'enquete</label>
+                                <input type="date" name="date_denquete" class="form-control" id="date_denquete" value="{{ $irrigue->date_denquete }}">
+                                </div>
+                              
                                 <!-- Champ numero_recepi_reconn -->
                                 <div class="form-group">
                                     <label for="recepisse_reconnaissance">Numéro de Récepissé de Reconnaissance</label>
